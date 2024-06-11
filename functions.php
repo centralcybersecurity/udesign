@@ -35,6 +35,15 @@
 add_filter('pre_set_site_transient_update_themes', 'my_theme_check_for_update');
 
 
+function my_theme_after_theme_update($upgrader_object, $options) {
+    if ($options['action'] == 'update' && $options['type'] === 'theme') {
+        delete_option('theme_mods_' . get_option('stylesheet'));
+    }
+}
+add_action('upgrader_process_complete', 'my_theme_after_theme_update', 10, 2);
+
+
+
 if ( ! function_exists( 'udesign_support' ) ) :
 
 	/**
