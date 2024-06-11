@@ -8,52 +8,84 @@
  * @since 1.0
  */
 
- add_filter('pre_set_site_transient_update_themes', 'udesign_check_for_update');
+ 
 
- function udesign_check_for_update($checked_data) {
-     if (!isset($checked_data->checked) || !is_array($checked_data->checked)) {
-         return $checked_data;
-     }
- 
-     $theme_slug = 'udesign';
-     $current_version = wp_get_theme($theme_slug)->get('Version');
-     $update_api_url = 'https://unifiedloop.com/wpdev/themes/udesign/update-api.php';
- 
-     $request = wp_remote_get($update_api_url);
-     if (is_wp_error($request)) {
-         error_log('Update check failed: ' . $request->get_error_message());
-         return $checked_data;
-     }
- 
-     if (wp_remote_retrieve_response_code($request) !== 200) {
-         error_log('Update check failed: HTTP ' . wp_remote_retrieve_response_code($request));
-         return $checked_data;
-     }
- 
-     $response = json_decode(wp_remote_retrieve_body($request), true);
- 
-     if (!isset($response['new_version']) || !isset($response['download_url'])) {
-         error_log('Update check failed: Invalid response');
-         return $checked_data;
-     }
- 
-     error_log('Current version: ' . $current_version);
-     error_log('New version: ' . $response['new_version']);
- 
-     if (version_compare($current_version, $response['new_version'], '<')) {
-         $checked_data->response[$theme_slug] = [
-             'new_version' => $response['new_version'],
-             'package' => $response['download_url'],
-             'slug' => $theme_slug,
-         ];
-         error_log('Update available: ' . $response['new_version']);
-     } else {
-         error_log('No update needed');
-     }
- 
-     return $checked_data;
- }
- 
+
+function force_theme_update_check() {
+    delete_site_transient('update_themes');
+    wp_update_themes();
+}
+add_action('admin_init', 'force_theme_update_check');
+
+add_filter('pre_set_site_transient_update_themes', 'udesign_check_for_update');
+
+function udesign_check_for_update($checked_data) {
+    if (!isset($checked_data->checked) || !is_array($checked_data->checked)) {
+        return $checked_data;
+    }
+
+    $theme_slug = 'udesign';
+    $current_version = wp_get_theme($theme_slug)->get('Version');
+    $update_api_url = 'https://unifiedloop.com/wpdev/themes/udesign/update-api.php';
+
+    $request = wp_remote_get($update_api_url);
+    if (is_wp_error($request)) {
+        error_log('Update check failed: ' . $request->get_error_message());
+        return $checked_data;
+    }
+
+    if (wp_remote_retrieve_response_code($request) !== 200) {
+        error_log('Update check failed: HTTP ' . wp_remote_retrieve_response_code($request));
+        return $checked_data;
+    }
+
+    $response = json_decode(wp_remote_retrieve_body($request), true);
+
+    if (!isset($response['new_version']) || !isset($response['download_url'])) {
+        error_log('Update check failed: Invalid response');
+        return $checked_data;
+    }
+
+    error_log('Current version: ' . $current_version);
+    error_log('New version: ' . $response['new_version']);
+
+    if (version_compare($current_version, $response['new_version'], '<')) {
+        $checked_data->response[$theme_slug] = [
+            'new_version' => $response['new_version'],
+            'package' => $response['download_url'],
+            'slug' => $theme_slug,
+        ];
+        error_log('Update available: ' . $response['new_version']);
+    } else {
+        error_log('No update needed');
+    }
+
+    return $checked_data;
+}
+
+
+
+// Prevent renaming theme folder during installation
+add_filter('upgrader_pre_install', 'my_theme_prevent_rename', 10, 3);
+
+function my_theme_prevent_rename($return, $package, $wp_upgrader) {
+    if ($wp_upgrader->skin->theme_info) {
+        // Get the theme directory name from the package file path
+        $theme_dir = get_theme_dir_from_package($package);
+        // Set the 'destination_name' property to the theme directory name
+        $wp_upgrader->skin->theme_info['destination_name'] = $theme_dir;
+    }
+    return $return;
+}
+
+// Get theme directory name from package file path
+function get_theme_dir_from_package($package) {
+    // Extract the theme folder name from the package file path
+    $theme_dir = basename($package, '.zip');
+    // Optionally, you can perform additional processing to sanitize the theme folder name if needed
+    return $theme_dir;
+}
+
 
 
 if ( ! function_exists( 'udesign_support' ) ) :
