@@ -7,7 +7,7 @@
 ?>
 <!-- wp:cover {"url":"<?php echo esc_url( get_parent_theme_file_uri( '/assets/images/header-bg.png' ) ); ?>","id":921,"dimRatio":0,"overlayColor":"secondary-bg-color","align":"full","className":"header-media"} -->
 <div class="wp-block-cover alignfull header-media header-banner">
-	<span aria-hidden="true" class="wp-block-cover__background has-secondary-bg-color-background-color has-background-dim-0 has-background-dim"></span>
+	<span aria-hidden="true" class="wp-block-cover__background "></span>
 	<img class="wp-block-cover__image-background wp-image-921" alt="" src="<?php echo esc_url( get_parent_theme_file_uri( '/assets/images/header-bg.png' ) ); ?>" data-object-fit="cover"/>
 	<div class="wp-block-cover__inner-container">
 		<!-- wp:group {"layout":{"type":"constrained"}} -->
