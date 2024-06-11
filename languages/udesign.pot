@@ -1,14 +1,14 @@
-# <!=Copyright (C) 2023 Catch Themes
+# <!=Copyright (C) 2023 Unified Themes
 # This file is distributed under the GNU General Public License v2 or later.=!>
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Udesign\n"
-"Report-Msgid-Bugs-To: https://catchthemes.com/contact-us/\n"
+"Report-Msgid-Bugs-To: https://unifiedloop.com/contact-us/\n"
 "POT-Creation-Date: 2024-04-27 08:10+0545\n"
 "PO-Revision-Date: 2023-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Catch Themes <info@catchthemes.com>\n"
-"Language-Team: Catch Themes <info@catchthemes.com>\n"
+"Last-Translator: Catch Themes <info@unifiedloop.com>\n"
+"Language-Team: Catch Themes <info@unifiedloop.com>\n"
 "Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"

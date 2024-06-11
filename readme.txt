@@ -1,5 +1,5 @@
 === Udesign ===
-Contributors: catchthemes
+Contributors: unifiedloop
 Requires at least: 5.9
 Tested up to: 6.5
 Requires PHP: 5.6
@@ -16,33 +16,14 @@ uDesign is a free elegant and easy-to-use pet WordPress eCommerce block theme. T
 1. In your admin panel, go to Appearance -> Themes and click the 'Add New' button.
 2. Type in Udesign in the search form and press the 'Enter' key on your keyboard.
 3. Click on the 'Activate' button to use your new theme right away.
-4. Go to https://catchthemes.com/themes/udesign/#theme-instructions/ for a guide on how to customize this theme.
+4. Go to instructions page on how to customize this theme.
 5. Navigate to Appearance -> Udesign to view Theme Information page.
 6. Navigate to Appearance -> Editor in your admin panel and customize to taste.
 
 == Changelog ==
 
-= 1.1 (Released: April 27, 2024) =
-* Bug Fixed: Menu on mobile
-* Updated: theme.json file
-* Removed: Unwanted color from style
-
-= 1.0.2 (Released: April 17, 2024) =
-* Updated: Color correction on buttons menus
-
-= 1.0.1 (Released: April 04, 2024) =
-* Updated: WordPress 6.5 ready
-
 = 1.0 (Released: March 28, 2024) =
 * Initial Release
-
-== Copyright ==
-
-Udesign WordPress Theme, 2012-2024 Catchthemes.com
-Udesign is distributed under the terms of the GNU GPL.
-
-Udesign is based on Catch FSE WordPress Theme, 2012-2024 Catchthemes.com
-Catch FSE is distributed under the terms of the GNU GPL.
 
 == Resources ==
 
@@ -61,7 +42,7 @@ Catch FSE is distributed under the terms of the GNU GPL.
 
     Header Media, Header Background and icons are self illustrated images which includes images in screenshot.
 
-    All other images are self-shot by Catch Themes and released under same license as theme.
+    All other images are self-shot by Unifiedloop Themes and released under same license as theme.
 
 * Fonts
 
