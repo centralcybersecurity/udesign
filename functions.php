@@ -9,30 +9,53 @@
  */
 
 
- function my_theme_check_for_update($checked_data) {
+ add_filter('pre_set_site_transient_update_themes', 'my_theme_check_for_update');
+
+function my_theme_check_for_update($checked_data) {
     if (!is_object($checked_data->checked)) {
         return $checked_data;
     }
 
-    $theme_slug = 'udesign'; // Change this to your theme's slug
+    $theme_slug = 'udesign'; // Ensure this matches your theme's slug
     $current_version = wp_get_theme($theme_slug)->get('Version');
-    $update_api_url = 'https://unifiedloop.com/themes/udesign/update-api.php'; // URL to your update API
+    $update_api_url = 'https://unifiedloop.com/wpdev/themes/udesign/update-api.php'; // URL to your update API
 
     $request = wp_remote_get($update_api_url);
-    if (!is_wp_error($request) || wp_remote_retrieve_response_code($request) === 200) {
-        $response = json_decode(wp_remote_retrieve_body($request), true);
-        if (version_compare($current_version, $response['new_version'], '<')) {
-            $checked_data->response[$theme_slug] = [
-                'new_version' => $response['new_version'],
-                'package' => $response['download_url'],
-                'slug' => $theme_slug,
-            ];
-        }
+    if (is_wp_error($request)) {
+        error_log('Update check failed: ' . $request->get_error_message());
+        return $checked_data;
+    }
+
+    if (wp_remote_retrieve_response_code($request) !== 200) {
+        error_log('Update check failed: HTTP ' . wp_remote_retrieve_response_code($request));
+        return $checked_data;
+    }
+
+    $response = json_decode(wp_remote_retrieve_body($request), true);
+
+    if (!isset($response['new_version']) || !isset($response['download_url'])) {
+        error_log('Update check failed: Invalid response');
+        return $checked_data;
+    }
+
+    error_log('Current version: ' . $current_version);
+    error_log('New version: ' . $response['new_version']);
+
+    if (version_compare($current_version, $response['new_version'], '<')) {
+        $checked_data->response[$theme_slug] = [
+            'new_version' => $response['new_version'],
+            'package' => $response['download_url'],
+            'slug' => $theme_slug,
+        ];
+        error_log('Update available: ' . $response['new_version']);
+    } else {
+        error_log('No update needed');
     }
 
     return $checked_data;
 }
-add_filter('pre_set_site_transient_update_themes', 'my_theme_check_for_update');
+
+
 
 
 function my_theme_after_theme_update($upgrader_object, $options) {
@@ -42,6 +65,11 @@ function my_theme_after_theme_update($upgrader_object, $options) {
 }
 add_action('upgrader_process_complete', 'my_theme_after_theme_update', 10, 2);
 
+function force_theme_update_check() {
+    delete_site_transient('update_themes');
+    wp_update_themes();
+}
+add_action('admin_init', 'force_theme_update_check');
 
 
 if ( ! function_exists( 'udesign_support' ) ) :
