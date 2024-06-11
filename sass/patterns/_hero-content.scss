@@ -1,0 +1,51 @@
+.hero-section {
+    overflow: hidden;
+
+    ul {
+        padding: 0;
+
+        li {
+            list-style: none;
+            position: relative;
+            padding-left: clamp(40px, 5vw, 60px);
+
+            &:before {
+                content: "";
+                position: absolute;
+                left: 0;
+                width: 20px;
+                height: 20px;
+                background: var(--wp--preset--color--secondary-dark-color) url(./assets/images/tick.svg) no-repeat;
+                background-position: center;
+                @include border(45px);
+                color: var(--wp--preset--color--color-light);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 12px;
+                top: 50%;
+                @include transform(translateY(-50%));
+            }
+
+            &:not(:last-child) {
+                margin-bottom: var(--wp--custom--spacing--extra-small)
+            }
+        }
+    }
+
+    .wp-block-image img {
+        @include transition(1s ease-in-out);
+        clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
+    }
+}
+
+
+.hero-section {
+
+    .hero-content {
+        @include transform(translateX(20%));
+        clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+        opacity: 0;
+        @include transition(1s ease-in-out);
+    }
+}

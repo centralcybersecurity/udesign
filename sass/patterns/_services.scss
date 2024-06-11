@@ -1,0 +1,40 @@
+.services-section {
+    .wp-block-column {
+        padding: var(--wp--custom--spacing--section-heading-gap);
+        background-color: var(--wp--preset--color--fade-red-color);
+
+        &:is(:hover) {
+            .wp-block-image {
+                @include border(50%);
+
+                &:before {
+                    @include transform(translate(-50%, -50%) scale(1));
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+
+    .wp-block-image {
+        padding: 20px;
+        background: var(--wp--preset--color--foreground);
+        position: relative;
+        overflow: hidden;
+
+        &:before {
+            background-color: var(--wp--preset--color--hover-color);
+            height: 100%;
+            width: 100%;
+            content: "";
+            left: 50%;
+            top: 50%;
+            position: absolute;
+            @include transform(translate(-50%, -50%) scale(0.2));
+            opacity: 0;
+        }
+
+        img {
+            @include transform(scale(0.5))
+        }
+    }
+}

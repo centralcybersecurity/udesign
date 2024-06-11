@@ -1,0 +1,82 @@
+.offer-section {
+    overflow: hidden;
+
+    .number {
+        font-size: var(--wp--preset--font-size--large);
+        border: 1px solid var(--wp--preset--color--button-bg-color);
+        color: var(--wp--preset--color--title-color);
+        font-family: var(--wp--preset--font-family--notosansjp);
+        font-weight: var(--wp--custom--typography--font-weight--extra-bold);
+        @include border(45px);
+        height: 65px;
+        @include flex;
+        justify-content: center;
+        align-items: center;
+        width: 70px;
+        min-width: 70px;
+        min-height: 70px;
+    }
+
+    .wp-block-columns {
+        flex-wrap: wrap !important;
+        gap: 0;
+
+        .content {
+            gap: 1.2rem;
+
+            &:is(:hover, :focus) {
+                .number {
+                    background-color: var(--wp--preset--color--hover-color);
+                    color: var(--wp--preset--color--color-light);
+                }
+            }
+        }
+
+        .offer-image {
+            order: -1;
+            flex-basis: 100%;
+
+            img {
+                clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
+                @include transition(1s ease-in-out);
+            }
+        }
+
+        .offer-content {
+            flex: 1;
+
+            >div {
+                margin-block-start: var(--wp--custom--spacing--wp-block-navigation-widget);
+
+                .wp-block-heading {
+                    margin-bottom: 14px;
+                }
+
+                p {
+                    margin: 0;
+                }
+            }
+
+            &:first-child .content {
+                flex-direction: row-reverse;
+                justify-content: flex-end;
+            }
+        }
+    }
+}
+
+.offer-content:not(.offer-right) {
+    .content {
+        @include transform(translateX(-20%));
+        opacity: 0;
+        @include transition(0.5s ease-in-out);
+    }
+}
+
+.offer-right {
+    .content {
+        @include transform(translateX(20%));
+        opacity: 0;
+        @include transition(0.5s ease-in-out);
+    }
+}

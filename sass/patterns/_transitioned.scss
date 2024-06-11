@@ -1,0 +1,98 @@
+/* ==================================
+           HERO SECTION
+=================================== */
+
+.hero-section.transition-element,
+.contact-section.transition-element {
+
+    .wp-block-image img {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    .hero-content,
+    .contact-content {
+        @include transform(translateX(0));
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        opacity: 1;
+        z-index: 99;
+    }
+}
+
+.block-editor-block-list__block.hero-section,
+.block-editor-block-list__block.contact-section {
+    .wp-block-image img {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    .hero-content,
+    .contact-content {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        @include transform(translateX(0));
+        opacity: 1;
+    }
+}
+
+/* ==================================
+           HEADDER MEDIA
+=================================== */
+
+.block-editor-block-list__block.header-media {
+
+    .media-content {
+
+        h2:first-child,
+        h2:nth-child(2),
+        p,
+        .wp-block-buttons .wp-block-button:nth-child(1),
+        .wp-block-buttons .wp-block-button:nth-child(2) {
+            transform: none;
+            opacity: 1;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        }
+    }
+}
+
+/* ==================================
+           feature-cat SECTION
+=================================== */
+
+.block-editor-block-list__block.wp-block-section.feature-cat-section {
+    .wp-block-column:first-child {
+        clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+        opacity: 1;
+    }
+}
+
+
+/* ==================================
+          OFFER SECTION
+=================================== */
+
+.transition-element .offer-content:not(.offer-right),
+.block-editor-block-list__block .offer-content,
+.transition-element .offer-right,
+.block-editor-block-list__block .offer-content:not(.offer-right) {
+
+    .content {
+        @include transform(translateX(0%));
+        opacity: 1;
+    }
+}
+
+.transition-element.offer-section .offer-image .wp-block-image img,
+.block-editor-block-list__block.offer-section .offer-image .wp-block-image img {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+
+.recent-product-section.transition-element,
+.services-section.transition-element,
+.recent-product-section.block-editor-block-list__block,
+.services-section.block-editor-block-list__block {
+
+    .wc-block-grid__product,
+    .wp-block-column {
+        opacity: 1;
+        @include transform(translateY(0));
+    }
+}

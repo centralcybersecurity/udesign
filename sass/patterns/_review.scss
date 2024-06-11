@@ -1,0 +1,96 @@
+.review-section {
+
+
+    .wc-block-components-review-list {
+        display: grid;
+        grid-gap: 5rem;
+        padding: 0;
+
+        li {
+            background-color: var(--wp--preset--color--secondary-bg-color);
+            box-sizing: border-box;
+            @include flex;
+            flex-direction: column-reverse;
+            justify-content: flex-end;
+            margin-top: 0;
+            margin-inline: auto;
+            position: relative;
+            padding: var(--wp--custom--spacing--normal);
+            padding-top: 3rem;
+            padding-bottom: 50px;
+            position: relative;
+            @include border(6px);
+            width: 100%;
+
+            &:first-child {
+                margin-bottom: 50px;
+                margin-top: 50px;
+            }
+
+            &:after {
+                background-color: var(--wp--preset--color--secondary-dark-color);
+                top: 100%;
+                content: "";
+                height: 50px;
+                position: absolute;
+                width: 80%;
+                left: 50%;
+                @include transform(translateX(-50%));
+                @include border(0 0 8px 8px);
+                opacity: 0.4;
+            }
+
+            .wc-block-components-review-list-item__image {
+                margin-inline: auto;
+                height: 6.25rem;
+                width: 6.25rem;
+                position: absolute;
+                height: 4.25rem;
+                width: 4.25rem;
+                position: absolute;
+                top: -38px;
+                left: 30px;
+
+
+                img {
+                    @include border(50%);
+                }
+            }
+
+            .wc-block-components-review-list-item__meta {
+                gap: 10px;
+            }
+
+            .wc-block-components-review-list-item__info {
+                display: block;
+                margin: 0;
+
+                .wc-block-components-review-list-item__author {
+                    text-transform: capitalize;
+                }
+            }
+        }
+    }
+}
+
+.wp-block-section.review-section:nth-child(even) .wc-block-components-review-list li .wc-block-components-review-list-item__text:before {
+    color: var(--wp--preset--color--border-color);
+}
+
+.wp-block-section.review-section {
+    padding-bottom: var(--wp--custom--spacing--section-block-top);
+}
+
+.review-section {
+    .wc-block-components-review-list-item__product {
+        margin: 0;
+    }
+
+    .wc-block-components-review-list-item__product+.wc-block-components-review-list-item__author+.wc-block-components-review-list-item__published-date:before {
+        content: none;
+    }
+}
+
+.wc-block-components-review-list-item__product+.wc-block-components-review-list-item__author+.wc-block-components-review-list-item__published-date {
+    padding: 0;
+}

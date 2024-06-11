@@ -1,0 +1,97 @@
+.wp-block-post-template {
+  li {
+    .wp-block-post-title {
+      font-size: var(--wp--preset--font-size--inner-section-title);
+      font-family: var(--wp--preset--font-family--notosansjp);
+      font-weight: var(--wp--custom--typography--font-weight--normal);
+      text-transform: capitalize;
+    }
+
+    .wp-block-post-title {
+      margin-top: 0.6rem;
+    }
+  }
+}
+
+.wp-block-group.wp-block-post-meta>div {
+  position: relative;
+}
+
+.wp-block-group .wp-block-post-excerpt {
+  margin-block-start: 1.05rem;
+}
+
+.blog-section .wp-block-post-template,
+.wp-block-post-template.alignfull {
+  gap: var(--wp--custom--spacing--section-heading);
+}
+
+.wp-block-post-template figure {
+  margin-bottom: var(--wp--custom--spacing--extra-small);
+}
+
+figure a,
+.wp-block-post-title a {
+  padding: 0;
+}
+
+.wp-block-group.wp-block-post-meta {
+  @include flex;
+  align-items: center;
+  margin-top: 7.5px;
+}
+
+.w-block-widget a {
+  font-size: var(--wp--preset--font-size--upper-heading);
+}
+
+.wp-block-group.wp-block-post-container {
+  margin-top: 0;
+  padding: var(--wp--custom--spacing--wp-comment-vertical) var(--wp--custom--spacing--normal);
+}
+
+.wp-block-post-meta a {
+  font-size: var(--wp--preset--font-size--small);
+}
+
+.wp-block-columns.wp-block-sidebar {
+  gap: var(--wp--custom--spacing--section-block-bottom);
+  justify-content: space-between;
+}
+
+.wp-block-tag-cloud>a {
+  border: 1px solid var(--wp--preset--color--border-color);
+}
+
+.scroller-section .inner-wrap {
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  overflow-y: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 1.5rem;
+  scrollbar-width: 0;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.scroller-section .inner-wrap [class*="has-"] ul.wc-block-grid__products {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 2rem;
+
+  .wc-block-grid__product {
+    flex-basis: 80%;
+  }
+}
+
+.scroller-section .inner-wrap ul,
+.scroller-section .inner-wrap a:-webkit-any-link {
+  cursor: url(./assets/images/arrow-drag.png), auto;
+  transition: all 0.2s;
+  will-change: transform;
+  fill: #fff;
+  user-select: none;
+}

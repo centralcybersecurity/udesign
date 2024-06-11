@@ -1,0 +1,268 @@
+# <!=Copyright (C) 2023 Catch Themes
+# This file is distributed under the GNU General Public License v2 or later.=!>
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Udesign\n"
+"Report-Msgid-Bugs-To: https://catchthemes.com/contact-us/\n"
+"POT-Creation-Date: 2024-04-27 08:10+0545\n"
+"PO-Revision-Date: 2023-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Catch Themes <info@catchthemes.com>\n"
+"Language-Team: Catch Themes <info@catchthemes.com>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
+"_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
+"esc_html_x:1,2c\n"
+"X-Poedit-Basepath: ..\n"
+"X-Textdomain-Support: yes\n"
+"X-Generator: Poedit 3.4.2\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: inc/about.php:27 patterns/footer-three-columns.php:15
+msgid "uDesign"
+msgstr ""
+
+#: inc/about.php:46
+msgid "Free Full Site Editing WordPress Theme"
+msgstr ""
+
+#: inc/about.php:54
+msgid "Getting Started with uDesign!"
+msgstr ""
+
+#: inc/about.php:55
+msgid ""
+"Awesome! uDesign has been installed and activated successfully. Now, you "
+"can start building your dream website with a wide range of highly-"
+"customizable block patterns, templates, and template parts available in this "
+"astounding theme."
+msgstr ""
+
+#: inc/about.php:56
+msgid "Theme instructions"
+msgstr ""
+
+#: inc/about.php:62
+msgid "More Features with uDesign Pro Theme"
+msgstr ""
+
+#: inc/about.php:63
+msgid ""
+"To get more beautiful block patterns and templates, we recommend you upgrade "
+"to uDesign Pro. With the pro theme installed, get more options, blocks, "
+"block patterns, templates and template parts."
+msgstr ""
+
+#: inc/about.php:64
+msgid "Buy uDesign Pro"
+msgstr ""
+
+#: inc/about.php:73
+msgid "Important Links"
+msgstr ""
+
+#: inc/about.php:74
+msgid "Theme Info"
+msgstr ""
+
+#: inc/about.php:75
+msgid "View Demo"
+msgstr ""
+
+#: inc/about.php:76
+msgid "FSE FAQs"
+msgstr ""
+
+#: inc/about.php:77
+msgid "Change log"
+msgstr ""
+
+#: inc/about.php:78
+msgid "Support"
+msgstr ""
+
+#: inc/about.php:85
+msgid "Leave us a review"
+msgstr ""
+
+#: inc/about.php:86
+msgid ""
+"Loved uDesign? Feel free to leave your feedback. Your opinion helps us "
+"reach more audiences!"
+msgstr ""
+
+#: inc/about.php:87
+msgid "Review"
+msgstr ""
+
+#: inc/block-patterns.php:18
+msgid "Udesign"
+msgstr ""
+
+#: inc/block-patterns.php:19
+msgid "Pages"
+msgstr ""
+
+#: inc/block-styles.php:26
+msgid "No Padding"
+msgstr ""
+
+#: inc/block-styles.php:35 inc/block-styles.php:53 inc/block-styles.php:62
+#: inc/block-styles.php:72 inc/block-styles.php:82 inc/block-styles.php:91
+msgid "Theme Style"
+msgstr ""
+
+#: inc/block-styles.php:44
+msgid "Plain"
+msgstr ""
+
+#: inc/icon-function.php:38
+msgid "Please define default parameters in the form of an array."
+msgstr ""
+
+#: inc/icon-function.php:43
+msgid "Please define an SVG icon filename."
+msgstr ""
+
+#: patterns/404-header.php:18
+msgid "404 Nothing Found"
+msgstr ""
+
+#: patterns/404-header.php:23
+msgid "Oops! That page can't be found"
+msgstr ""
+
+#: patterns/blog-header-with-background.php:17
+msgid "Recent From Blog"
+msgstr ""
+
+#: patterns/footer-three-columns.php:20
+msgid "Our experts are available 24/7:"
+msgstr ""
+
+#: patterns/footer-three-columns.php:29
+msgid "1800-872-479"
+msgstr ""
+
+#: patterns/footer-three-columns.php:41
+msgid "dogs.food.ukj"
+msgstr ""
+
+#: patterns/footer-three-columns.php:57
+msgid "Our Products"
+msgstr ""
+
+#: patterns/footer-three-columns.php:69
+msgid "Let's Connect"
+msgstr ""
+
+#: patterns/footer-three-columns.php:90 patterns/footer.php:14
+#, php-format
+msgctxt "1: Year, 2: Site Title with home URL, 3: Privacy Policy Link"
+msgid "Copyright &copy; %1$s %2$s"
+msgstr ""
+
+#: patterns/footer-three-columns.php:91 patterns/footer.php:15
+msgid "Y"
+msgstr ""
+
+#: patterns/header-media.php:20
+msgid "Nutrionally Complete"
+msgstr ""
+
+#: patterns/header-media.php:24
+msgid "Keep a dog for the safety of your home."
+msgstr ""
+
+#: patterns/header-media.php:28
+msgid ""
+"Explore new products and future bestsellers along with our WordPress Theme."
+msgstr ""
+
+#: patterns/header-media.php:34
+msgid "View Collection"
+msgstr ""
+
+#: patterns/hero-content.php:25
+msgid "Grab the Best and Quality Pet Food"
+msgstr ""
+
+#: patterns/hero-content.php:28
+msgid ""
+"Exploring Ideas of your own VR World ity own VR World Ideas of your own VR "
+"World ity own Reality own VR World."
+msgstr ""
+
+#: patterns/hero-content.php:48
+msgid "Read More"
+msgstr ""
+
+#: patterns/mobile-sticky-icon-menu.php:21
+msgid "Home"
+msgstr ""
+
+#: patterns/offer.php:16
+msgid "Get the Best of what We Offer"
+msgstr ""
+
+#: patterns/offer.php:33
+msgid "Group Training"
+msgstr ""
+
+#: patterns/offer.php:36 patterns/offer.php:57 patterns/offer.php:78
+#: patterns/offer.php:115 patterns/offer.php:136 patterns/offer.php:157
+msgid "Exploring Ideas of your World ity own VR eas of yourself."
+msgstr ""
+
+#: patterns/offer.php:41
+msgid "1"
+msgstr ""
+
+#: patterns/offer.php:54
+msgid "Private Training"
+msgstr ""
+
+#: patterns/offer.php:62
+msgid "2"
+msgstr ""
+
+#: patterns/offer.php:75
+msgid "Home Services"
+msgstr ""
+
+#: patterns/offer.php:83
+msgid "3"
+msgstr ""
+
+#: patterns/offer.php:107
+msgid "4"
+msgstr ""
+
+#: patterns/offer.php:112
+msgid "Certified Dry Foods"
+msgstr ""
+
+#: patterns/offer.php:128
+msgid "5"
+msgstr ""
+
+#: patterns/offer.php:133
+msgid "Best Medical services"
+msgstr ""
+
+#: patterns/offer.php:149
+msgid "6"
+msgstr ""
+
+#: patterns/offer.php:154
+msgid "Hospital Services"
+msgstr ""
+
+#: patterns/shop-header.php:17
+msgid "The Shop"
+msgstr ""

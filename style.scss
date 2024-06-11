@@ -1,0 +1,45 @@
+/*
+Theme Name: uDesign
+Theme URI: https://catchthemes.com/themes/udesign
+Author: Catch Themes
+Author URI: https://catchthemes.com
+Description: uDesign is a free elegant and easy-to-use pet WordPress eCommerce block theme. This theme is ideal for all types of animal care websites, including a blog or a shop. With uDesign, you can promote your best-selling items right on your homepage. The theme comes with full WooCommerce support perfect for a successful online store. It features a clean and attractive design that works for all kinds of pet businesses. The theme gives you many editing options, so customize the theme to suit your specific needs. uDesign makes your site work insanely fast with a splendid well-structured layout. There are 17+ block patterns, 15 Templates, and 8 Template Parts available in this theme. Some of them are 404 Header, Archive Header, Blog Header With Background, Footer Three Columns, Footer, Header Media, Hero Content, 404 Content, Offer, Post Header, Recent Blog, Search Header, Shop Header, Sidebar, and many more. You can easily set up a good-looking pet shop or store and customize them. The theme is highly responsive, SEO optimized, and translation-ready to help your website get indexed.
+Requires at least: 5.9
+Tested up to: 6.5
+Requires PHP: 5.6
+Version: 1.1
+License: GPLv3
+License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
+Text Domain: udesign
+Tags: blog, portfolio, photography, one-column, two-columns, left-sidebar, right-sidebar, block-patterns, block-styles, custom-background, custom-logo, custom-menu, featured-images, footer-widgets, full-site-editing, threaded-comments, wide-blocks, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned.
+
+Udesign is based on Catch FSE WordPress Theme, 2012-2023 Catchthemes.com
+Catch FSE is distributed under the terms of the GNU GPL.
+*/
+
+/*--------------------------------------------------------------
+# Mixin
+--------------------------------------------------------------*/
+@import "sass/mixin/mixin";
+
+/*--------------------------------------------------------------
+# Blocks
+--------------------------------------------------------------*/
+
+@import "sass/blocks/all-blocks";
+
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
+@import "sass/patterns/all-patterns";
+
+/* --- Block Media Quries
+-------------------------------------------------------- */
+@import "sass/media-query";
+
+/* --- Block Color
+-------------------------------------------------------- */
+@import "sass/color";
